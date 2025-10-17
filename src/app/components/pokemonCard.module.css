@@ -1,0 +1,12 @@
+.card {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.pokemonName {
+    font-size: 16px;
+    font-color: white;
+    text-stoke: 2px black;
+}

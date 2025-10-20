@@ -11,11 +11,13 @@ export default async function Home() {
     return (
         <div className={styles.page}>
             <main className={styles.main}>
-                {pokemonList.map((pokemon: any) => {
+                {pokemonList.map((pokemon: any, index: number) => {
+                    console.log(index);
                     return (
                         <PokemonCard
                             key={pokemon.id}
                             nome={pokemon.name}
+                            index={index + 1}
                             sprite={pokemon.pokemonsprites[0].sprites}
                             tipos={pokemon.pokemontypes}
                         />

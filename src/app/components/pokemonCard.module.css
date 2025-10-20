@@ -3,10 +3,31 @@
     height: 180px;
     border-radius: 12px;
     padding: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.titleDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .pokemonName {
-    font-size: 16px;
+    font-size: 14px;
     font-color: white;
-    text-stoke: 2px black;
+}
+
+.pokemonSprite {
+    margin: auto
+}
+
+.typesDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: auto;
 }

@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useCallback } from 'react';
 
-import styles from './filtros.module.css';
+import styles from './pokedex.module.css';
 
 import { listGenerations } from '../queries/listGenerations';
 import type { GetAllPokemon, Generation } from '../types';
@@ -10,10 +10,11 @@ import { listPokemon } from '../queries/listPokemon';
 import debounce from '@/app/libs/debounce';
 
 import ButtonGeneration from './buttonGeneration';
+import HoverPrefetchLink from './hoverPrefetchLink';
 import PokemonCard from './pokemonCard';
 
 
-export default function Filtros() {
+export default function Pokedex() {
     const [inputValue, setInputValue] = useState<string>("");
     const [generationsJson, setGenerationsJson] = useState<[]>([]);
     const [generationsFilter, setGenerationsFilter] = useState<number[]>([]);
@@ -97,16 +98,20 @@ export default function Filtros() {
             <main className={styles.main}>
                 {pokemonFilter.map((pokemon: GetAllPokemon) => {
                     return (
-                        <PokemonCard
+                        <HoverPrefetchLink
                             key={pokemon.id}
-                            nome={pokemon.name}
-                            pokedexnumber={pokemon.pokemonspecy.pokemondexnumbers}
-                            sprite={pokemon.pokemonsprites[0].sprites}
-                            tipos={pokemon.pokemontypes}
-                        />
+                            href={`/${pokemon.id}`}
+                        >
+                            <PokemonCard
+                                nome={pokemon.name}
+                                pokedexnumber={pokemon.pokemonspecy.pokemondexnumbers}
+                                sprite={pokemon.pokemonsprites[0].sprites}
+                                tipos={pokemon.pokemontypes}
+                            />
+                        </HoverPrefetchLink>
                     );
                 })}
-            </main>
+            </main >
         </>
     );
 }

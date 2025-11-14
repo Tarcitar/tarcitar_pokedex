@@ -11,7 +11,8 @@
     height: 26px;
     font-family: var(--font-geist-sans);
     padding: 0 6px;
-    border-radius: 6px;
+    border-radius: 5px;
+    border: 1px solid #EDEDED;
 }
 
 .generationsDiv {

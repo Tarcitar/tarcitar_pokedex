@@ -1,0 +1,35 @@
+.filtrosDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nomeInput {
+    width: 30%;
+    height: 26px;
+    font-family: var(--font-geist-sans);
+    padding: 0 6px;
+    border-radius: 6px;
+}
+
+.generationsDiv {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-rows: 1fr;
+    gap: 36px;
+}
+
+@media (max-width: 600px) {
+    .main {
+        align-items: center;
+    }
+}

@@ -1,0 +1,21 @@
+.button {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #EDEDED;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #EDEDED;
+}
+
+.button:hover {
+    background-color: #EDEDED;
+    color: #000000;
+}
+
+.active {
+    background-color: #EDEDED;
+    color: #000000;
+}

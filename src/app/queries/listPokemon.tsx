@@ -1,7 +1,9 @@
 import { cache } from 'react';
 
 const query = `query getAllPokemon {
-  pokemon(order_by: {id: asc}) {
+  pokemon(
+    order_by: {id: asc}
+  ) {
     name
     id
     pokemonsprites {
@@ -18,11 +20,14 @@ const query = `query getAllPokemon {
         name
         id
       }
+      pokemondexnumbers {
+        pokedex_number
+      }
     }
   }
 }`
 
-async function fetchPokemon() {
+const fetchPokemon = async () => {
     const res = await fetch('https://graphql.pokeapi.co/v1beta2', {
         method: 'POST',
         headers: {

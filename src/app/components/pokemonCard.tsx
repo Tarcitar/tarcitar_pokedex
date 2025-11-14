@@ -2,24 +2,26 @@ import Image from 'next/image';
 
 import styles from './pokemonCard.module.css';
 
+import { type Type } from '../types';
+
 export default function({
     nome,
-    index,
+    pokedexnumber,
     sprite,
     tipos
 }: {
     nome: string,
-    index: number,
+    pokedexnumber: Array<{ pokedex_number: number }>
     sprite: string,
-    tipos: Array<{ type: { id: number, name: string } }>
+    tipos: Array<{ type: Type }>
 }) {
-    const tipoPrimario = tipos[0].type.name;
-    const tipoSecundario = tipos.length === 2 ? tipos[1].type.name : tipos[0].type.name;
-    const iconTipoPrimario = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/${tipos[0].type.id}.png`;
+    const tipoPrimario = tipos[0]?.type.name;
+    const tipoSecundario = tipos.length === 2 ? tipos[1].type.name : tipos[0]?.type.name;
+    const iconTipoPrimario = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/${tipos[0]?.type.id}.png`;
     const iconTipoSecundario = tipos.length === 2 ?
         `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/${tipos[1].type.id}.png` :
         null;
-    const pokedexNumber = `#${index?.toString().padStart(4, '0')}`
+    const pokedexNumber = `#${pokedexnumber[0]?.pokedex_number.toString().padStart(4, '0')}`
 
     return (
         <div

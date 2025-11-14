@@ -1,10 +1,5 @@
 import styles from "./page.module.css";
 
-import PokemonCard from './components/pokemonCard';
-import { listPokemon } from './queries/listPokemon';
-
-import { type GetAllPokemon } from './types';
-
 import Filtros from './components/filtros';
 
 

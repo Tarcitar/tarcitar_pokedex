@@ -7,18 +7,22 @@
 }
 
 .nomeInput {
-    width: 30%;
-    height: 26px;
+    width: max(300px, 30%);
+    height: 30px;
     font-family: var(--font-geist-sans);
     padding: 0 6px;
     border-radius: 5px;
     border: 1px solid #EDEDED;
+    background-color: transparent;
 }
 
 .generationsDiv {
     display: flex;
     gap: 16px;
-    margin-top: 16px;
+    margin-top: 26px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .main {
@@ -32,5 +36,7 @@
 @media (max-width: 600px) {
     .main {
         align-items: center;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
 }

@@ -27,7 +27,7 @@ export default function({
         <div
             className={styles.card}
             style={{
-                background: `linear-gradient(var(--${tipoPrimario}-dark), var(--${tipoSecundario}-light`
+                background: `linear-gradient(var(--${tipoPrimario}-dark), var(--${tipoSecundario}-light)`
             }}
         >
             <div
@@ -50,9 +50,9 @@ export default function({
                 <Image
                     src={sprite}
                     alt=""
-                    width={120}
-                    height={120}
                     className={styles.pokemonSprite}
+                    width={80}
+                    height={80}
                 />
             }
 

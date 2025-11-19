@@ -1,5 +1,5 @@
 .button {
-    width: 100px;
+    width: 90px;
     height: 30px;
     border-radius: 5px;
     background-color: transparent;
@@ -8,6 +8,7 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     border: 1px solid #EDEDED;
+    text-align: center;
 }
 
 .button:hover {
